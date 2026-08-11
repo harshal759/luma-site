@@ -249,8 +249,9 @@ export function resolveAnchorValue(anchor) {
   const text = (anchor.textContent || '').trim();
   if (/^https?:\/\//i.test(text) && !/^https?:\/\//i.test(hrefAttr)) {
     try {
-      const parsed = new URL(text);
-      if (`${parsed.pathname}${parsed.search}${parsed.hash}` === hrefAttr) return text;
+      // eslint-disable-next-line no-new
+      new URL(text);
+      return text;
     } catch {
       /* not a valid absolute URL, ignore */
     }
