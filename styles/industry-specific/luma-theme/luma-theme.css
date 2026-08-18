@@ -971,7 +971,12 @@ body.luma-theme header nav .nav-tools .sign-in-btn::after {
   }
 
   body.luma-theme main .join-us .panel-wrapper {
-    gap: 2rem 0;
+    gap: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.luma-theme main .join-us .panel-wrapper .field-wrapper {
+    grid-column: span 1;
   }
 
   body.luma-theme .checkout-shipping-actions-panel button {
