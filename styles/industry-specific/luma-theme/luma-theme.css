@@ -51,6 +51,7 @@ body.luma-theme footer .footer a {
 body.luma-theme header nav .nav-sections ul > li > a {
   font-family: 'Adobe Clean Bold';
   font-size: 1.1rem;
+  display: block;
 }
 
 body.luma-theme footer .footer > div {
@@ -173,7 +174,6 @@ body.luma-theme header nav .nav-tools a[href*="sign"] {
   text-align: center;
   align-items: center;
   padding: 10px;
-  padding-left: 25px;
 }
 
 body.luma-theme .search.search-icon .search-box .icon img,
@@ -802,7 +802,9 @@ body.luma-theme main .product-detail .pd-video-layout .pd-video-age {
   border-radius: 0;
 }
 
-/* Shared mobile hamburger + mobile nav fix for all industry themes (extracted from expnews-theme) */
+body.luma-theme header nav[aria-expanded='true'] {
+  padding-bottom: 20px;
+}
 
 body.luma-theme header .nav-hamburger button {
   color: var(--nav-text-color, #2C2C2C);
@@ -824,15 +826,6 @@ body.luma-theme header .nav-hamburger-icon::after {
 /* sign-in link becomes an icon-only account/avatar glyph on mobile */
 body.luma-theme header nav .nav-tools .sign-in-btn::after {
   content: none !important;
-}
-
-body.luma-theme main .section.sign-in-container {
-  flex-direction: column !important;
-}
-
-body.luma-theme main .section.sign-in-container .default-content-wrapper,
-body.luma-theme main .section.sign-in-container .sign-in-wrapper {
-  max-width: unset !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -948,5 +941,40 @@ body.luma-theme main .section.sign-in-container .sign-in-wrapper {
 
   body.luma-theme header nav[aria-expanded='true'] .nav-tools .search, body.luma-theme header nav[aria-expanded='true'] .nav-tools .search-trigger, body.luma-theme header nav[aria-expanded='true'] .nav-tools .icon-search-light {
     display: block !important;
+  }
+
+  body.luma-theme .na-carousel-btn {
+    padding-bottom: 3px;
+  }
+
+  body.luma-theme main .create-account .submit-wrapper button {
+    text-align: center;
+  }
+
+  body.luma-theme main .section.section-horizontal-widths,
+  body.luma-theme main .section.sign-in-container {
+    flex-direction: column !important;
+  }
+
+  body.luma-theme main .section.section-horizontal-widths > div,
+  body.luma-theme main .section.sign-in-container .default-content-wrapper,
+  body.luma-theme main .section.sign-in-container .sign-in-wrapper {
+    max-width: unset !important;
+  }
+
+  body.luma-theme main .hero.image-right > div:nth-child(2) {
+    padding-left: 40px;
+  }
+
+  body.luma-theme .hero.block {
+    height: auto;
+  }
+
+  body.luma-theme main .join-us .panel-wrapper {
+    gap: 2rem 0;
+  }
+
+  body.luma-theme .checkout-shipping-actions-panel button {
+    text-align: center;
   }
 }
