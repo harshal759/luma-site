@@ -1170,3 +1170,8 @@ body.wehealthcare-theme .section.whc-colcards .hero-wrapper .hero > div:nth-chil
 body.wehealthcare-theme .section.whc-colcards.bg-light .hero-wrapper .hero > div:nth-child(2) .button-container.cta-button a.button:focus{
   outline:none;
 }
+
+/* No animated underline on the header links of this site. */
+body.wehealthcare-theme header nav .nav-sections ul > li > a::before {
+  display: none !important;
+}
